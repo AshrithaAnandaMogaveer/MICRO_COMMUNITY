@@ -1,0 +1,12 @@
+The StatefulBuilder structure should be:
+
+showDialog(
+  context: context,
+  builder: (context) => StatefulBuilder(
+    builder: (context, setState) => Dialog(
+      // dialog content
+    ),
+  ), // <- This closing parenthesis is missing
+);
+
+I need to add the closing parenthesis for StatefulBuilder before the showDialog closes.
